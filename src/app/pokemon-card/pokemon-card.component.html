@@ -1,0 +1,14 @@
+<div class="pokemon-card" (click)="mostrarDetalhesPokemon()">
+    <img [src]="imagem">
+    <br />
+    <b>{{ pokemon }}</b>
+    <div class="card">
+      <p 
+        *ngFor="let tipo of TipoPokemon;" 
+        [ngClass]="{
+          'grass': tiposEnum}">
+        {{ tipo }}
+     </p>
+    </div>
+    <br />
+</div>

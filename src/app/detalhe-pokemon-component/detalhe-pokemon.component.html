@@ -1,0 +1,17 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ pokemon }}</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="imagem" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <h2>Localização</h2>
+      <p *ngFor="let local of locais"> {{ local }} </p> 
+      <h2>Tipos</h2>
+      <p  *ngFor="let tipo of TipoPokemon"> {{ tipo }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="voltarPraHome()">Voltar</button>
+    </mat-card-actions>
+  </mat-card>
