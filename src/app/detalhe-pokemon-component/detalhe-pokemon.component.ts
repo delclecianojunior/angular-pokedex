@@ -39,7 +39,7 @@ export class DetalhePokemonComponent implements OnInit{
 
     const tipoPokemon = this.activatedRoute.snapshot.queryParamMap.get('tipoPokemon');
     this.TipoPokemon = JSON.parse(tipoPokemon?? '');
-    console.log(this.TipoPokemon);
+    //console.log(this.TipoPokemon);
 
     //Mostra localizacões dos pokemons
     const requisicaoLocal = await this.pokemonService.localizacaoPokemon(parseInt(parametro));

@@ -1,13 +1,15 @@
 <div class="pokemon-card" (click)="mostrarDetalhesPokemon()">
     <img [src]="imagem">
     <br />
-    <b>{{ pokemon }}</b>
+    <b>{{ pokemon.charAt(0).toUpperCase() + pokemon.slice(1) }}</b>
     <div class="card">
       <p 
         *ngFor="let tipo of TipoPokemon;" 
         [class]="tipo">
-        {{ tipo }}
+        {{ tipo.charAt(0).toUpperCase() + tipo.slice(1)}}
      </p>
     </div>
     <br />
 </div>
+
+<!-- Transformando a primeira letra do tipo do pokemon em maiuscula -->

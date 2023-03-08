@@ -6,13 +6,15 @@ import { PokemonCardComponent } from '../pokemon-card/pokemon-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonService } from '../services/pokemon.service';
 import { PokemonImagemService } from '../services/pokemon-imagem.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [PokemonListComponent, PokemonCardComponent],
   imports: [
     CommonModule,
-    PokemonListRoutingModule
+    PokemonListRoutingModule,
+    FormsModule
   ],
   exports: [
     PokemonListComponent,
