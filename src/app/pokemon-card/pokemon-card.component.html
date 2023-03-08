@@ -5,8 +5,7 @@
     <div class="card">
       <p 
         *ngFor="let tipo of TipoPokemon;" 
-        [ngClass]="{
-          'grass': tiposEnum}">
+        [class]="tipo">
         {{ tipo }}
      </p>
     </div>
