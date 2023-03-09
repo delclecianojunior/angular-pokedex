@@ -5,10 +5,16 @@
     </mat-card-header>
     <img class="card-imagem" mat-card-image [src]="imagem" alt="Photo of a Shiba Inu">
     <mat-card-content>
-      <h2>Localização</h2>
-      <p class="card-local" *ngFor="let local of locais"> {{ local }} </p> 
+      <div *ngIf="localizacaoVazia">
+        <h2>Localização</h2>
+        <p>localização não encontrada</p>
+      </div>
+      <div *ngIf="!localizacaoVazia">
+        <h2>Localização</h2>
+        <p class="card-local" *ngFor="let local of locais"> {{ local }} </p> 
+      </div>
       <h2>Tipos</h2>
-      <p class="card-tipo" *ngFor="let tipo of TipoPokemon"> {{ tipo.charAt(0).toUpperCase() + tipo.slice(1) }}</p>
+      <p class="card-tipo" *ngFor="let tipo of TipoPokemon" [class]="tipo"> {{ tipo.charAt(0).toUpperCase() + tipo.slice(1) }}</p>
     </mat-card-content>
     <mat-card-actions>
       <button class="card-voltar" mat-button (click)="voltarPraHome()">

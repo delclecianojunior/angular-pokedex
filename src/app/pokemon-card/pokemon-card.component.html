@@ -4,7 +4,7 @@
     <b>{{ pokemon.charAt(0).toUpperCase() + pokemon.slice(1) }}</b>
     <div class="card">
       <p 
-        *ngFor="let tipo of TipoPokemon;" 
+        *ngFor="let tipo of TipoPokemon" 
         [class]="tipo">
         {{ tipo.charAt(0).toUpperCase() + tipo.slice(1)}}
      </p>

@@ -18,6 +18,7 @@ export class DetalhePokemonComponent implements OnInit{
   locais = [];
 
   TipoPokemon: any[] = [];
+  localizacaoVazia = false;
 
   constructor(
     private activatedRoute: ActivatedRoute, 
@@ -27,6 +28,8 @@ export class DetalhePokemonComponent implements OnInit{
  
   async ngOnInit() {
 
+    this.localizacaoVazia = true;
+    
     const numero = this.activatedRoute.snapshot.queryParamMap.get('numero');
     const parametro = numero?? '';
     this.imagem = this.PokemonImagemService.pegarImagemPokemon(parseInt(parametro));
@@ -45,7 +48,13 @@ export class DetalhePokemonComponent implements OnInit{
     const requisicaoLocal = await this.pokemonService.localizacaoPokemon(parseInt(parametro));
     
     this.locais = requisicaoLocal.map((item:any) => {
-      return item.location_area.name;
+      if(item === ''){
+        return 0;
+      }
+      else{
+        this.localizacaoVazia = false;
+        return item.location_area.name;
+      }
     });
   }
 

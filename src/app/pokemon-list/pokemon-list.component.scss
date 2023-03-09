@@ -1,0 +1,41 @@
+.pokemon-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.pokemon-cabecalho{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    padding-left: 5px;
+}
+
+.pokemon-cabecalho label{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.campo-pesquisa{
+    width: 58vh;
+    border: 3px solid #616161;
+    clear: both;
+    color: #313131;
+    margin-top: 0.325em;
+    background-color: #fff;
+    border-radius: 5px;
+    height: 30px;
+    text-transform: lowercase;
+}
+
+.botao-pesquisa{
+    background-color: #ee6b2f;
+    width: 12vh;
+    color: #fff;
+    height: 38px;
+    position: relative;
+    left: 372px;
+    bottom: 38px;
+}
